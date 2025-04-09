@@ -1,15 +1,36 @@
 function generateProfessions(count) {
     const baseTitles = [
-        "Software Engineer", "Doctor", "Teacher", "Nurse", "Electrician", "Plumber",
-        "Carpenter", "Data Scientist", "UX Designer", "Product Manager",
-        "Marketing Executive", "Financial Analyst", "HR Manager", "Graphic Designer",
-        "Cybersecurity Expert", "Web Developer", "Mobile App Developer", "Pilot",
-        "Chef", "Lawyer", "Police Officer", "Firefighter", "Pharmacist",
-        "Accountant", "Dentist", "Civil Engineer", "Mechanical Engineer",
-        "Project Manager", "Business Analyst", "AI Researcher", "DevOps Engineer",
-        "Customer Support Specialist", "Therapist", "Veterinarian", "Scientist",
-        "Architect", "Translator", "Journalist", "Content Writer", "Librarian"
-        // Add more common jobs as needed
+        "Software Engineer", "Web Developer", "Mobile App Developer", "Full Stack Developer", "Frontend Developer",
+        "Backend Developer", "DevOps Engineer", "Data Scientist", "Machine Learning Engineer", "AI Engineer",
+        "UI/UX Designer", "Product Manager", "QA Tester", "Cybersecurity Analyst", "Cloud Architect",
+        "Game Developer", "Blockchain Developer", "Technical Support Specialist", "IT Manager", "Network Engineer",
+
+        "Doctor", "Nurse", "Pharmacist", "Dentist", "Surgeon", "Therapist", "Psychologist", "Radiologist",
+        "Medical Assistant", "Physician Assistant", "Veterinarian", "Chiropractor", "Optometrist", "Lab Technician",
+        "Paramedic", "Nutritionist", "Anesthesiologist", "Occupational Therapist", "Speech Therapist",
+
+        "Teacher", "Professor", "Tutor", "Librarian", "Academic Advisor", "School Counselor", "Principal",
+        "Special Education Teacher", "Substitute Teacher", "Teaching Assistant", "Curriculum Developer",
+
+        "Accountant", "Financial Analyst", "Business Analyst", "Operations Manager", "Marketing Manager",
+        "Sales Executive", "HR Manager", "Recruiter", "Customer Service Representative", "Executive Assistant",
+        "Office Manager", "Project Manager", "Administrative Assistant", "Data Entry Clerk", "Receptionist",
+
+        "Electrician", "Plumber", "Carpenter", "Welder", "Mechanic", "Construction Worker", "Truck Driver",
+        "HVAC Technician", "Painter", "Heavy Equipment Operator", "Landscaper", "Roofer", "Mason", "Janitor",
+
+        "Graphic Designer", "Photographer", "Videographer", "Animator", "Art Director", "Copywriter",
+        "Content Creator", "Social Media Manager", "Editor", "Journalist", "Blogger", "Illustrator",
+        "Fashion Designer", "Interior Designer", "Voice Actor",
+
+        "Cashier", "Retail Sales Associate", "Store Manager", "Barista", "Bartender", "Waiter", "Chef",
+        "Cook", "Hotel Manager", "Housekeeper", "Concierge", "Flight Attendant", "Travel Agent", "Tour Guide",
+
+        "Lawyer", "Judge", "Police Officer", "Detective", "Paralegal", "Court Clerk", "Firefighter",
+        "Security Guard", "Military Officer", "Customs Officer",
+
+        "Farmer", "Fisherman", "Zookeeper", "Park Ranger", "Archaeologist", "Astronomer", "Scientist",
+        "Chemist", "Geologist", "Biologist", "Historian", "Economist", "Statistician"
     ];
 
     const prefixes = ["Junior", "Senior", "Lead", "Assistant", "Principal", "Chief"];
