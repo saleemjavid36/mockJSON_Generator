@@ -3,15 +3,17 @@ import { v4 as uuidv4 } from 'uuid';
 import { namesData } from "../../data/nameData";
 import { phoneNumbers } from "../../data/phoneNumbers";
 import { postalCodes } from "../../data/postalZipData";
-import { countries } from "../../data/countriesData";
 import { generateEmailAddresses } from "../../data/emailData";
 import { countriesFullData } from "../../data/CounriesFullData";
+import { UserProfessions } from "../../data/professions";
+import { Hobbies } from "../../data/hobbies";
+
 
 const MocGenerator = () => {
      const uuid= uuidv4();
-     useEffect(()=>{
-        // console.log(phoneNumbers)
-      })
+    //  useEffect(()=>{
+    //     console.log(UserProfessions)
+    //   })
 
     const generateMockData = () => {
         const createRecord = (recordId) => {
@@ -24,21 +26,18 @@ const MocGenerator = () => {
             : null;
           return {
             _id: `ObjectId(${uuid})`,
-            id:recordId,
+            id:Number(recordId),
             name: name,
             phone:`${country.phone}-${phoneNumbers[Math.floor(Math.random()*phoneNumbers.length)]}`,
             postalZip: `${postalCodes[Math.floor(Math.random()*postalCodes.length)]}`,
             country: country.name,
-            symbol:``,
             stateProvinces: stateProvinces,
             email:userRandomMails[Math.floor(Math.random() * userRandomMails.length)],
             address: `${Math.floor(Math.random() * 9000 + 100)} Random Street`,
-            salary: `${(Math.random() * 10000 + 1).toFixed(2)}`,
+            salary:Number((Math.random() * 10000 + 1).toFixed(2)),
             currencySymbol:`${country.symbol}`,
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            numberrange: Math.floor(Math.random() * 10 + 1),
-            guid: `${recordId}-GUID-${Math.floor(Math.random() * 99999)}`,
-            weightedlist: Math.floor(Math.random() * 10 + 1),
+            profession: UserProfessions[Math.floor(Math.random() * UserProfessions.length)],
+            hobbies:Hobbies[Math.floor(Math.random() * Hobbies.length)],
             descendants: [
               {
                 favoriteDish: ["Spaghetti", "Pizza", "Burger"][
