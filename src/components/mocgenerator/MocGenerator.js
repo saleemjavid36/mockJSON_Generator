@@ -7,13 +7,14 @@ import { generateEmailAddresses } from "../../data/emailData";
 import { countriesFullData } from "../../data/CounriesFullData";
 import { UserProfessions } from "../../data/professions";
 import { Hobbies } from "../../data/hobbies";
+import { Dishes } from "../../data/dishes";
 
 
 const MocGenerator = () => {
      const uuid= uuidv4();
     //  useEffect(()=>{
-    //     console.log(UserProfessions)
-    //   })
+    //    console.log(UserProfessions)
+    //  })
 
     const generateMockData = () => {
         const createRecord = (recordId) => {
@@ -38,12 +39,9 @@ const MocGenerator = () => {
             currencySymbol:`${country.symbol}`,
             profession: UserProfessions[Math.floor(Math.random() * UserProfessions.length)],
             hobbies:Hobbies[Math.floor(Math.random() * Hobbies.length)],
-            descendants: [
+            userPreferences: [
               {
-                favoriteDish: ["Spaghetti", "Pizza", "Burger"][
-                  Math.floor(Math.random() * 3)
-                ],
-                recipeUrl: `www.recipes${recordId}.com/dish`,
+                favoriteDish: Dishes[Math.floor(Math.random() * Dishes.length)],
                 cuisineType: ["Italian", "American", "Mexican"][
                   Math.floor(Math.random() * 3)
                 ],
